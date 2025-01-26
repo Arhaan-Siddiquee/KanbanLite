@@ -19,11 +19,11 @@ const Navbar = () => {
   return (
     <header className="fixed w-full z-50 top-4">
       <div className="container mx-auto px-4">
-        <div className="fixed top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-blue-400 to-blue-600 shadow-lg rounded-2xl border-2 border-black px-4 py-4 z-50 w-[1100px] h-[60px]">
+        <div className="fixed top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-black to-black shadow-lg rounded-2xl border-2 border-blue-600 px-4 py-4 z-50 w-[1100px] h-[60px]">
           <div className="flex justify-between items-center">
             {/* Logo */}
             <h1 className="text-xl font-bold tracking-wide">
-              <Link href="/" className="text-white hover:text-blue-100 transition-colors">
+              <Link href="/logo" className="text-white hover:text-blue-100 transition-colors">
                 Kanban Lite
               </Link>
             </h1>
@@ -97,7 +97,7 @@ const Navbar = () => {
 // Hero section
 const HeroSection = () => {
   return (
-    <section className="bg-gradient-to-br from-purple-500 to-indigo-500 text-white py-24">
+    <section className="bg-gradient-to-br from-black to-black text-white py-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
