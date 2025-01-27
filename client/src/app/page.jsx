@@ -6,6 +6,19 @@ import { motion } from "framer-motion";
 import { Github, Linkedin, Twitter, Mail, Phone, MapPin } from 'lucide-react';
 import { Menu, X } from 'lucide-react'; 
 // Navbar component
+
+const CodeBlock = () => (
+  <div className="bg-[#1E1E1E] rounded-lg p-4 text-white font-mono text-sm">
+    <div className="text-gray-400">// addNumbersToToken</div>
+    <div>function addNumbersToToken(num1, num2) {'{'}</div>
+    <div className="pl-4">let sum = num1 + num2;</div>
+    <div className="pl-4">let token = {'{'}</div>
+    <div className="pl-8">value: sum,</div>
+    <div className="pl-8">value: sum,</div>
+    <div className="pl-4">return token;</div>
+    <div>{'};'}</div>
+  </div>
+);
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -207,50 +220,106 @@ const HeroSection = () => {
 // Features section
 const FeatureSection = () => {
   return (
-    <section id="features" className="bg-gray-100 py-12">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-center mb-8">Key Features</h2>
-        <div className="grid lg:grid-cols-3 gap-8">
+    <section className="bg-gradient-to-bl  from-purple-900 to-indigo-950 min-h-screen py-16 px-4">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-white mb-4">
+            Features that work for your future.
+          </h2>
+          <p className="text-gray-400">
+            Check out our amazing features and experience the power for yourself.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-8 mb-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-white p-6 rounded-lg shadow-lg"
+            className="bg-[#1A0B3D] p-8 rounded-2xl border border-purple-900"
           >
-            <h3 className="text-xl font-bold mb-2">Streamlined Tasks</h3>
-            <p>
-              Focus on your tasks with a minimal design that eliminates
-              distractions.
+            <div className="bg-purple-600 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
+              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+              </svg>
+            </div>
+            <h3 className="text-xl font-bold text-white mb-4">Time Saving</h3>
+            <p className="text-gray-400 mb-6">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur sunt quia id autem nisi ipsum placeat voluptatum illum maiores, molestias saepe. Quis ab rerum placeat, corporis ratione perspiciatis debitis. Laborum!
             </p>
+            <button className="text-purple-400 hover:text-purple-300 transition-colors">
+              View dashboard
+            </button>
           </motion.div>
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-white p-6 rounded-lg shadow-lg"
+            className="bg-[#1A0B3D] p-8 rounded-2xl border border-purple-900"
           >
-            <h3 className="text-xl font-bold mb-2">Simple UI</h3>
-            <p>
-              Easy-to-use interface for quick updates and seamless task
-              management.
+            <div className="bg-pink-600 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
+              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 className="text-xl font-bold text-white mb-4">No Paywall and Freemium</h3>
+            <p className="text-gray-400 mb-6">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem error dicta ratione veniam accusamus ullam numquam modi? Iste ex quos cum perferendis dolor aut, nisi cupiditate accusamus in natus veniam.
             </p>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="bg-white p-6 rounded-lg shadow-lg"
-          >
-            <h3 className="text-xl font-bold mb-2">Collaboration</h3>
-            <p>
-              Work with your team in real time for better coordination and
-              efficiency.
-            </p>
+            <button className="text-purple-400 hover:text-purple-300 transition-colors">
+              View tokens
+            </button>
           </motion.div>
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="bg-[#1A0B3D] p-8 rounded-2xl border border-purple-900"
+        >
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <div className="bg-pink-600 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-white mb-4">All Usefull Services</h3>
+              <p className="text-gray-400 mb-6">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni, earum inventore voluptatum minus quod autem accusantium repudiandae quisquam qui similique ea nihil vero, nulla aut odio excepturi veniam error amet?
+              </p>
+              <button className="text-purple-400 hover:text-purple-300 transition-colors">
+                View code collaboration
+              </button>
+            </div>
+            <div className="flex items-center">
+              <CodeBlock />
+            </div>
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mt-16"
+        >
+          <h2 className="text-4xl font-bold text-white mb-4">
+            Our powerful analytics provides invaluable insights.
+          </h2>
+          <p className="text-gray-400 mb-8 max-w-3xl mx-auto">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus modi, tempore consectetur doloribus necessitatibus labore sequi odio consequatur iure esse eius dolore, dolor quod, libero id ex aliquam? Ipsa, dolor.
+          </p>
+          <button className="bg-purple-600 text-white px-8 py-3 rounded-full hover:bg-purple-700 transition-colors">
+            Download the app
+          </button>
+        </motion.div>
       </div>
     </section>
   );
