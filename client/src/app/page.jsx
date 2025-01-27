@@ -328,27 +328,140 @@ const FeatureSection = () => {
 // Contact section
 const ContactSection = () => {
   return (
-    <section id="contact" className="bg-white py-12">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-center mb-8">Get in Touch</h2>
-        <form className="max-w-lg mx-auto">
-          <input
-            type="email"
-            placeholder="Your Email"
-            className="w-full p-3 mb-4 border rounded-lg focus:outline-none"
-          />
-          <textarea
-            rows="5"
-            placeholder="Your Message"
-            className="w-full p-3 mb-4 border rounded-lg focus:outline-none"
-          ></textarea>
-          <button
-            type="submit"
-            className="bg-purple-600 text-white py-3 px-6 rounded-lg font-bold hover:bg-purple-500 transition"
-          >
-            Send Message
-          </button>
-        </form>
+    <section className="bg-gradient-to-br  from-indigo-950 to-purple-900 py-24 relative overflow-hidden">
+      {/* Background gradient circles */}
+      <div className="absolute top-0 left-0 w-64 h-64 bg-purple-600/20 rounded-full filter blur-3xl" />
+      <div className="absolute bottom-0 right-0 w-64 h-64 bg-teal-600/20 rounded-full filter blur-3xl" />
+      <div className="absolute bottom-40 left-40 w-40 h-40 bg-blue-600/20 rounded-full filter blur-3xl" />
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.h2 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-4xl font-bold text-white text-center mb-12"
+        >
+          Any question or remarks? Just write us a message!
+        </motion.h2>
+
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="bg-gray-900/60 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-gray-800"
+        >
+          <div className="grid md:grid-cols-2 gap-12">
+            {/* Contact Information */}
+            <div>
+              <h3 className="text-2xl font-bold text-white mb-8">Contact Information</h3>
+              
+              <div className="space-y-6 mb-8">
+                <div className="flex items-center text-gray-300">
+                  <svg className="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                  <span>kanban@serices.com</span>
+                </div>
+                <div className="flex items-start text-gray-300">
+                  <svg className="w-6 h-6 mr-3 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                  <span>Skibidi House, Ohio Nagar,<br />Taiwan.</span>
+                </div>
+              </div>
+
+              <div className="flex space-x-4">
+                <a href="#" className="text-blue-400 hover:text-blue-300">
+                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.061a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.937 4.937 0 004.604 3.417 9.868 9.868 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63a9.936 9.936 0 002.46-2.548l-.047-.02z"/>
+                  </svg>
+                </a>
+                <a href="#" className="text-pink-500 hover:text-pink-400">
+                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                  </svg>
+                </a>
+                <a href="#" className="text-blue-600 hover:text-blue-500">
+                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            {/* Contact Form */}
+            <form className="space-y-6">
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <label className="block text-gray-300 mb-2">First Name</label>
+                  <input
+                    type="text"
+                    className="w-full bg-gray-800/50 border border-gray-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-purple-500"
+                  />
+                </div>
+                <div>
+                  <label className="block text-gray-300 mb-2">Last Name</label>
+                  <input
+                    type="text"
+                    className="w-full bg-gray-800/50 border border-gray-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-purple-500"
+                  />
+                </div>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <label className="block text-gray-300 mb-2">Email</label>
+                  <input
+                    type="email"
+                    className="w-full bg-gray-800/50 border border-gray-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-purple-500"
+                  />
+                </div>
+                <div>
+                  <label className="block text-gray-300 mb-2">Phone Number</label>
+                  <div className="relative">
+                    <span className="absolute left-4 top-2 text-gray-500">+91</span>
+                    <input
+                      type="tel"
+                      className="w-full bg-gray-800/50 border border-gray-700 rounded-lg px-4 py-2 pl-12 text-white focus:outline-none focus:border-purple-500"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-gray-300 mb-2">Select Subject?</label>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                  {['General Inquiry', 'UI', 'Packaging Design'].map((option) => (
+                    <label key={option} className="flex items-center space-x-2 text-gray-300">
+                      <input type="radio" name="subject" className="text-purple-500" />
+                      <span>{option}</span>
+                    </label>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-gray-300 mb-2">Message</label>
+                <textarea
+                  placeholder="Write your message.."
+                  rows="4"
+                  className="w-full bg-gray-800/50 border border-gray-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-purple-500"
+                ></textarea>
+              </div>
+
+              <div className="flex justify-end">
+                <button
+                  type="submit"
+                  className="bg-gray-800 text-white px-8 py-3 rounded-lg hover:bg-gray-700 transition-colors flex items-center space-x-2"
+                >
+                  <span>Send Message</span>
+                  <img src="/api/placeholder/20/20" alt="paper plane" className="w-5 h-5" />
+                </button>
+              </div>
+            </form>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
