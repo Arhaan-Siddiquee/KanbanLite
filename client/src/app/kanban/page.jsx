@@ -43,38 +43,6 @@ const themes = {
   },
 };
 
-const ThemeDropdown = ({ currentTheme, setCurrentTheme, theme }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  return (
-    <div className="relative">
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className={`p-2 rounded-lg flex items-center gap-2 ${theme.card} border ${theme.border}`}
-      >
-        <Palette className={`w-4 h-4 ${theme.text}`} />
-        <ChevronDown className={`w-4 h-4 ${theme.text}`} />
-      </button>
-      
-      {isOpen && (
-        <div className={`absolute right-0 mt-2 w-40 ${theme.card} rounded-lg shadow-lg border ${theme.border} py-1`}>
-          {Object.keys(themes).map((themeName) => (
-            <button
-              key={themeName}
-              onClick={() => {
-                setCurrentTheme(themeName);
-                setIsOpen(false);
-              }}
-              className={`w-full text-left px-4 py-2 ${theme.hover} ${theme.text}`}
-            >
-              {themeName.charAt(0).toUpperCase() + themeName.slice(1)}
-            </button>
-          ))}
-        </div>
-      )}
-    </div>
-  );
-};
 
 const BentoBox = ({ children, className = "", theme, delay = 0 }) => (
   <motion.div
@@ -134,9 +102,19 @@ const Kanban = () => {
   return (
     <div className={`min-h-screen ${theme.background} p-6 transition-colors duration-300`}>
       {/* Theme Switcher */}
-        <div className="fixed top-4 right-4">
-          <ThemeDropdown currentTheme={currentTheme} setCurrentTheme={setCurrentTheme} theme={theme} />
-        </div>
+      <div className="fixed top-6 right-6 flex gap-2">
+        {Object.keys(themes).map((themeName) => (
+          <button
+            key={themeName}
+            onClick={() => setCurrentTheme(themeName)}
+            className={`p-2 rounded-lg ${
+              currentTheme === themeName ? theme.accent : `${theme.card} border ${theme.border}`
+            } ${theme.text}`}
+          >
+            {themeName.charAt(0).toUpperCase() + themeName.slice(1)}
+          </button>
+        ))}
+      </div>
 
       <div className="max-w-8xl mx-auto grid grid-cols-12 gap-6 pt-16">
         {/* Left Column */}
