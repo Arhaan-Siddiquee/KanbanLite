@@ -19,7 +19,7 @@ const Navbar = () => {
   return (
     <header className="fixed w-full z-50 top-4">
       <div className="container mx-auto px-4">
-        <div className="fixed top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-black to-black shadow-lg rounded-2xl border-2 border-blue-600 px-4 py-4 z-50 w-[1100px] h-[60px]">
+        <div className="fixed top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-br  from-indigo-950 to-purple-900 shadow-lg rounded-2xl border-2 border-blue-600 px-4 py-4 z-50 w-[1100px] h-[60px]">
           <div className="flex justify-between items-center">
             {/* Logo */}
             <h1 className="text-xl font-bold tracking-wide">
@@ -97,20 +97,20 @@ const Navbar = () => {
 // Hero section
 const HeroSection = () => {
   return (
-    <section className="bg-gradient-to-br from-indigo-950 to-purple-900 min-h-screen relative overflow-hidden">
+    <section className="bg-gradient-to-br  from-indigo-950 to-purple-900 min-h-screen relative overflow-hidden">
       {/* Pink glow effect */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-pink-500 rounded-full filter blur-[128px] opacity-20" />
+      <div className="absolute top-0 right-0 w-96 h-96  bg-pink-500 rounded-full filter blur-[128px] opacity-20" />
       
-      <div className="container mx-auto px-4 pt-8 pb-32">
+      <div className="container mx-auto px-4 mt-[100px] pb-32">
         {/* Announcement banner */}
         <motion.div 
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           className="flex justify-center mb-12"
         >
-          <div className="bg-white bg-opacity-10 backdrop-blur-sm px-6 py-2 rounded-full">
+          <div className="bg-white bg-opacity-10 mt-[100px] backdrop-blur-sm px-6 py-2 rounded-full">
             <p className="text-white text-sm">
-              We just raised $20M in Series B. 
+              Lite Version of The Power Planer.
               <Link href="/learn-more" className="ml-2 underline">
                 Learn more
               </Link>
