@@ -97,37 +97,107 @@ const Navbar = () => {
 // Hero section
 const HeroSection = () => {
   return (
-    <section className="bg-gradient-to-br from-black to-black text-white py-24">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <motion.h1
-          initial={{ opacity: 0, y: -20 }}
+    <section className="bg-gradient-to-br from-indigo-950 to-purple-900 min-h-screen relative overflow-hidden">
+      {/* Pink glow effect */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-pink-500 rounded-full filter blur-[128px] opacity-20" />
+      
+      <div className="container mx-auto px-4 pt-8 pb-32">
+        {/* Announcement banner */}
+        <motion.div 
+          initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-4xl font-extrabold mb-4"
+          className="flex justify-center mb-12"
         >
-          Simplify Your Workflow with <span className="text-yellow-400">Kanban Lite</span>
-        </motion.h1>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="text-lg mb-8"
-        >
-          A clean, lightweight Kanban board that focuses on what matters the
-          most—your productivity.
-        </motion.p>
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
-        >
-          <Link
-            href="#features"
-            scroll={false}
-            className="bg-yellow-400 text-gray-800 py-3 px-6 rounded-lg font-bold shadow-md hover:bg-yellow-300 transition"
+          <div className="bg-white bg-opacity-10 backdrop-blur-sm px-6 py-2 rounded-full">
+            <p className="text-white text-sm">
+              We just raised $20M in Series B. 
+              <Link href="/learn-more" className="ml-2 underline">
+                Learn more
+              </Link>
+            </p>
+          </div>
+        </motion.div>
+
+        {/* Hero content */}
+        <div className="text-center mb-16">
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-6xl font-semibold text-white mb-4 tracking-tight"
           >
-            Explore Features
-          </Link>
+            Modern analytics
+            <br />
+            <span className="text-gray-400">for the modern world</span>
+          </motion.h1>
+          
+          <motion.p 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2 }}
+            className="text-gray-400 text-lg mb-8 max-w-2xl mx-auto"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Suspendisse varius enim in eros elementum tristique.
+          </motion.p>
+
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+            className="flex justify-center gap-4"
+          >
+            <button className="bg-white text-gray-900 px-6 py-3 rounded-full font-medium hover:bg-gray-100 transition">
+              Download the app
+            </button>
+            <button className="bg-white bg-opacity-10 text-white px-6 py-3 rounded-full font-medium hover:bg-opacity-20 transition">
+              Try It Today
+            </button>
+          </motion.div>
+        </div>
+
+        {/* Video Card */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4 }}
+          className="relative mx-auto max-w-5xl"
+        >
+          <div className="bg-gray-900 rounded-xl overflow-hidden shadow-2xl">
+            {/* Card Header */}
+            <div className="p-4 border-b border-gray-800">
+              <div className="flex items-center justify-between">
+                
+                <div className="flex items-center space-x-2">
+                  <div className="w-3 h-3 rounded-full bg-red-500"/>
+                  <div className="w-3 h-3 rounded-full bg-yellow-500"/>
+                  <div className="w-3 h-3 rounded-full bg-green-500"/>
+                </div>
+              </div>
+            </div>
+
+            {/* Video Container */}
+            <div className="relative aspect-video w-full">
+              <video
+                className="w-full h-full object-cover"
+                autoPlay
+                loop
+                muted
+                playsInline
+              >
+                <source src="/dummy.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              
+              {/* Optional Overlay for better video contrast */}
+              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/20 to-transparent pointer-events-none"/>
+            </div>
+          </div>
+
+          {/* Optional Device Frame Effect */}
+          <div className="absolute inset-0 pointer-events-none">
+            <div className="absolute inset-0 border border-white/10 rounded-xl"/>
+            <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent rounded-xl"/>
+          </div>
         </motion.div>
       </div>
     </section>
