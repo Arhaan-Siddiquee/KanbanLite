@@ -32,12 +32,12 @@ const Navbar = () => {
   return (
     <header className="fixed w-full z-50 top-4">
       <div className="container mx-auto px-4">
-        <div className="fixed top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-br  from-indigo-950 to-purple-900 shadow-lg rounded-2xl border-2 border-black px-4 py-4 z-50 w-[1100px] h-[60px]">
+        <div className="fixed top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-br  from-indigo-950 to-purple-900 shadow-lg rounded-2xl border-2 border-x-white px-4 py-2 z-50 w-[1100px] h-[60px]">
           <div className="flex justify-between items-center">
             {/* Logo */}
             <h1 className="text-xl font-bold tracking-wide">
               <Link href="/logo" className="text-white hover:text-blue-100 transition-colors">
-                Kanban Lite
+                <img src="/logo.svg" alt="Vaultflow Logo" className="w-36" />
               </Link>
             </h1>
 
