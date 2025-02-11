@@ -46,6 +46,7 @@ var/
 *.egg-info/
 installed.cfg
 *.egg
+.venv/
 
 # PyInstaller
 # Usually these files are written by a python script from a template
@@ -83,3 +84,4 @@ __pycache__/
 local_settings.py
 env
 db.sqlite3
+.env
