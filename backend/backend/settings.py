@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 from decouple import config
+from datetime import timedelta
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -163,11 +165,12 @@ REST_FRAMEWORK = {
 }
 
 #REST_AUTH settings
-REST_AUTH_SERIALIZERS = {
-    "REGISTER_SERIALIZER": "app.serializers.MyRegisterSerializer",
+
+
+REST_AUTH_REGISTER_SERIALIZERS = {
+    'REGISTER_SERIALIZER': 'app.serializers.MyRegisterSerializer',
 }
 
-from datetime import timedelta
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=5),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
@@ -178,8 +181,8 @@ SIMPLE_JWT = {
 
 REST_AUTH= {
     "USE_JWT": True,
-    "JWT_AUTH_COOKIE": "cookie",
-    "JWT_AUTH_REFRESH_COOKIE": "cookie",
+    "JWT_AUTH_COOKIE": "access",
+    "JWT_AUTH_REFRESH_COOKIE": "refresh",
     "JWT_AUTH_HTTPONLY": False,
     "SESSION_LOGIN": False,
     "OLD_PASSWORD_FIELD_ENABLED": True,

@@ -23,7 +23,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('app.urls')),
     path("dj-rest-auth/", include("dj_rest_auth.urls")),
-     
     path("dj-rest-auth/registration/", RegisterView.as_view(), name="register"),
     path(
         "dj-rest-auth/registration/account-confirm-email/<str:key>/",
