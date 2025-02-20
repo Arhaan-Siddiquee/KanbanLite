@@ -9,13 +9,14 @@ import { Menu, X } from 'lucide-react';
 
 const CodeBlock = () => (
   <div className="bg-purple-900 rounded-lg p-4 text-white font-mono text-sm">
-    <div className="text-gray-400">// addNumbersToToken</div>
-    <div>function addNumbersToToken(num1, num2) {'{'}</div>
-    <div className="pl-4">let sum = num1 + num2;</div>
-    <div className="pl-4">let token = {'{'}</div>
-    <div className="pl-8">value: sum,</div>
-    <div className="pl-8">value: sum,</div>
-    <div className="pl-4">return token;</div>
+    <div className="text-gray-400">// Lite Kanban Features</div>
+    <div>const KanbanLite = {'{'}</div>
+    <div className="pl-4">dragAndDrop: true,</div>
+    <div className="pl-4">minimalUI: true,</div>
+    <div className="pl-4">realTimeSync: false,</div>
+    <div className="pl-4">columns: ['To-Do', 'In Progress', 'Done'],</div>
+    <div className="pl-4">customTags: true,</div>
+    <div className="pl-4">userLimits: 'Unlimited',</div>
     <div>{'};'}</div>
   </div>
 );
@@ -313,9 +314,6 @@ const FeatureSection = () => {
           <h2 className="text-4xl font-bold text-white mb-4">
             Our powerful analytics provides invaluable insights.
           </h2>
-          <p className="text-gray-400 mb-8 max-w-3xl mx-auto">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus modi, tempore consectetur doloribus necessitatibus labore sequi odio consequatur iure esse eius dolore, dolor quod, libero id ex aliquam? Ipsa, dolor.
-          </p>
           <button className="bg-purple-600 text-white px-8 py-3 rounded-full hover:bg-purple-700 transition-colors">
             Download the app
           </button>
