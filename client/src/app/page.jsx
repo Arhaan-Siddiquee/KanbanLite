@@ -149,8 +149,8 @@ const HeroSection = () => {
             transition={{ delay: 0.2 }}
             className="text-gray-400 text-lg mb-8 max-w-2xl mx-auto"
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Suspendisse varius enim in eros elementum tristique.
+            Try the Simplified Version of the Complex Kanban 
+            in the Market Available there.
           </motion.p>
 
           <motion.div 
@@ -246,7 +246,7 @@ const FeatureSection = () => {
             </div>
             <h3 className="text-xl font-bold text-white mb-4">Time Saving</h3>
             <p className="text-gray-400 mb-6">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur sunt quia id autem nisi ipsum placeat voluptatum illum maiores, molestias saepe. Quis ab rerum placeat, corporis ratione perspiciatis debitis. Laborum!
+            Our lite Kanban version is designed for efficiency, offering a streamlined workflow without unnecessary complexity. With a minimalistic and intuitive interface, you can organize tasks quickly, focus on what matters, and boost productivity—all while saving time. No clutter, no distractions—just a fast and effective way to manage your work.
             </p>
             <button className="text-purple-400 hover:text-purple-300 transition-colors">
               View dashboard
@@ -267,7 +267,7 @@ const FeatureSection = () => {
             </div>
             <h3 className="text-xl font-bold text-white mb-4">No Paywall and Freemium</h3>
             <p className="text-gray-400 mb-6">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem error dicta ratione veniam accusamus ullam numquam modi? Iste ex quos cum perferendis dolor aut, nisi cupiditate accusamus in natus veniam.
+            We believe in providing unrestricted access to valuable content and services. With No Paywall, you can explore all features without any hidden fees or mandatory subscriptions. Our Freemium model ensures that essential tools and resources remain free, while optional premium upgrades offer enhanced functionality for those who need them. This approach allows everyone to benefit, whether they are casual users or professionals seeking advanced features.
             </p>
             <button className="text-purple-400 hover:text-purple-300 transition-colors">
               View tokens
@@ -291,7 +291,7 @@ const FeatureSection = () => {
               </div>
               <h3 className="text-xl font-bold text-white mb-4">All Usefull Services</h3>
               <p className="text-gray-400 mb-6">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni, earum inventore voluptatum minus quod autem accusantium repudiandae quisquam qui similique ea nihil vero, nulla aut odio excepturi veniam error amet?
+              We provide a comprehensive suite of essential tools and features to enhance your workflow. From task management to productivity boosters, our platform ensures you have everything you need in one place. No unnecessary extras—just practical, efficient, and user-friendly services designed to make your life easier.
               </p>
               <button className="text-purple-400 hover:text-purple-300 transition-colors">
                 View code collaboration
