@@ -3,7 +3,6 @@
 import Link from "next/link";
 import React, { useState } from 'react';
 import { motion } from "framer-motion";
-import { Github, Linkedin, Twitter, Mail, Phone, MapPin } from 'lucide-react';
 import { Menu, X } from 'lucide-react'; 
 // Navbar component
 
@@ -160,11 +159,11 @@ const HeroSection = () => {
             transition={{ delay: 0.3 }}
             className="flex justify-center gap-4"
           >
-            <button className="bg-white text-gray-900 px-6 py-3 rounded-full font-medium hover:bg-gray-100 transition">
-              Download the app
-            </button>
-            <button className="bg-white bg-opacity-10 text-white px-6 py-3 rounded-full font-medium hover:bg-opacity-20 transition">
+
+            <button className="bg-white bg-opacity-10 text-white px-6 py-3 rounded-full font-medium hover:bg-opacity-20 transition ">
+              <Link href="/kanban" >
               Try It Today
+              </Link>
             </button>
           </motion.div>
         </div>
@@ -311,12 +310,6 @@ const FeatureSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mt-16"
         >
-          <h2 className="text-4xl font-bold text-white mb-4">
-            Our powerful analytics provides invaluable insights.
-          </h2>
-          <button className="bg-purple-600 text-white px-8 py-3 rounded-full hover:bg-purple-700 transition-colors">
-            Download the app
-          </button>
         </motion.div>
       </div>
     </section>
@@ -454,7 +447,6 @@ const ContactSection = () => {
                   className="bg-gray-800 text-white px-8 py-3 rounded-lg hover:bg-gray-700 transition-colors flex items-center space-x-2"
                 >
                   <span>Send Message</span>
-                  <img src="/api/placeholder/20/20" alt="paper plane" className="w-5 h-5" />
                 </button>
               </div>
             </form>
