@@ -14,6 +14,9 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "KanbanLite",
   description: "A simple Kanban board",
+  icons: {
+    icon: "/fav.png",
+  },
 };
 
 export default function RootLayout({ children }) {
