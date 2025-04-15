@@ -805,7 +805,7 @@ export default function Home() {
         </div>
       </header>
       
-      <main className="container mx-auto py-6">
+      <main className="container mx-auto ml-10 py-6">
         {activeBoard ? (
           <>
             <div className="flex items-center mb-4">
